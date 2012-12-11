@@ -12,4 +12,4 @@ class Option(models.Model):
 class Choice(models.Model):
 	author = model.CharField(max_length=30)
 	magic_word = model.CharField(max_length=30)
-	option = models.OneToOneField('Option')
+	option = models.ForeignKey('Option')
