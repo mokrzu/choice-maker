@@ -1,0 +1,9 @@
+body {
+    margin: 0px;
+    padding: 20px;
+    font: 12px 'Lucida Grande',Arial,sans-serif;
+}
+
+ul.errorlist li {
+    color: #b94a48;
+}

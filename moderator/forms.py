@@ -1,4 +1,16 @@
-from django.forms.models import modelformset_factory
-from models import Option
+from django.forms.models import formset_factory
+from django.forms import ModelForm
+from models import *
+from django import forms
 
-OptionFormSet = modelformset_factory(Option)
+class OptionForm(ModelForm):
+    class Meta:
+        model = Option
+        exclude = ('option_set')
+
+OptionFormset = formset_factory(OptionForm, extra=2)
+
+class OptionSetForm(ModelForm):
+    class Meta:
+        model = OptionSet
+        exclude = ('user',)

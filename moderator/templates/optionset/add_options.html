@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}Add options{% endblock %}
+{% block content %}
+
+<form method="post" action="/moderator/optionset/{{ optionset_id }}/add_options/">
+{% csrf_token %}
+<p>
+{% for form in formset.forms %}
+    <div class="formset">
+        {{ form.name }}
+    </div>
+{% endfor %}
+{{ formset.management_form }}
+</p>
+<p><input type="submit" value="Add options"></p>
+</form>
+<script type="text/javascript">
+    $(function() {
+        $('.formset').formset();
+    })
+</script>
+{% endblock %}

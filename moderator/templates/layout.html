@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="{{ STATIC_URL }}bootstrap.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}application.css" rel="stylesheet">
+    <script src="{{ STATIC_URL }}jquery.js"></script>
+    <script src="{{ STATIC_URL }}jquery.formset.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% if flash.notice %}
+        <div class="flash">
+            <p>{{ flash.notice }}</p>
+        </div>
+    {% endif %}
+    {% if flash.url %}
+        <div class="flash">
+            <p>{{ flash.url }}</p>
+        </div>
+    {% endif %}
+    {% block content %}{% endblock %}
+</body>
+</html>

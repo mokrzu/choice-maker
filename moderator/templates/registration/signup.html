@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Sign up page{% endblock %}
+{% block content %}
+
+<form method="post" action="/moderator/signup/">
+{% csrf_token %}
+
+{{ form.as_p }}
+<input type="submit" value="Create the account">
+</form>
+
+{% endblock %}

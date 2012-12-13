@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}New registration{% endblock %}
+{% block content %}
+
+<form method="post" action="/moderator/new_optionset/">
+{% csrf_token %}
+
+{{ form.as_p }}
+<input type="submit" value="Create new registration">
+</form>
+
+{% endblock %}

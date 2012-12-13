@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}Choice Maker{% endblock %}
+
+{% block content %}
+<h1>Welcome to Choice Maker</h1>
+{% if is_logged_in %}
+    <h2>Your registrations:</h2>
+    <ul>
+    {% for optionset in registrations %}
+        <li>{{ optionset }}</li>
+        <ul>
+            {% for option in optionset.option_set.all %}
+                <li>{{ option }} (
+                    {% for user in option.choice_set.all %}
+                        {{ user }},
+                    {% endfor %})
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    </ul>
+    <a href="/moderator/new_optionset/">New registration</a> |
+    <a href="/moderator/logout/">Logout</a>
+{% else %}
+    <a href="/moderator/login/">Login</a> |
+    <a href="/moderator/signup/">Sign up</a>
+{% endif %}
+{% endblock %}
