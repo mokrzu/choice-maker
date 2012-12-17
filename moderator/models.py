@@ -9,7 +9,7 @@ class OptionSet(models.Model):
     user = models.ForeignKey(User)
 
     def __unicode__(self):
-        return self.name + ' (' + str(self.id) + ')'
+        return self.name + ' (limit: ' + str(self.limit) + ')'
 
     def ids(object):
         return object.id

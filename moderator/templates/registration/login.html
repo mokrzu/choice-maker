@@ -8,6 +8,7 @@
 
 <form method="post" action="/moderator/login/">
 {% csrf_token %}
+
 <table>
 <tr>
     <td>{{ form.username.label_tag }}</td>
@@ -17,11 +18,17 @@
     <td>{{ form.password.label_tag }}</td>
     <td>{{ form.password }}</td>
 </tr>
+<tr>
+	<td>
+		<input type="submit" value="login" />
+	</td>
+	<td>
+		<a id="signup" href="/moderator/signup/">Sign up</a>
+	</td>
+</tr>
+</form>
+
 </table>
 
-<input type="submit" value="login" />
-<input type="hidden" name="next" value="{{ next }}" />
-</form>
-<a href="/moderator/signup/">Sign up</a>
 
 {% endblock %}

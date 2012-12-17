@@ -8,7 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^moderator/', include('moderator.urls', namespace='moderator')),
-    # url(r'^ChoiceMaker/', include('ChoiceMaker.foo.urls')),
+    url(r'^registration/', include('registration.urls', namespace="registration")),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

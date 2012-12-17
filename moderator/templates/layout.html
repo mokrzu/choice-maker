@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="{{ STATIC_URL }}bootstrap.css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}application.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ STATIC_URL }}foundation.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}application.css" type="text/css">
+    
     <script src="{{ STATIC_URL }}jquery.js"></script>
     <script src="{{ STATIC_URL }}jquery.formset.min.js"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+    <header>
+            <div class="row">
+                <div class="nine column">
+                    <h1>Choice Maker</h1>
+                </div>
+                {% if show_login_panel %}
+                <div class="three columns" id="login-panel">
+                    {% if is_logged_in %}
+                    <ul id="lp" class="button-group rounded">
+                        <li>
+                            <a class="small secondary button round" href="/moderator/new_optionset/">New registration</a>
+                        </li>
+                        <li>
+                            <a class="small button round" href="/moderator/logout/">Logout</a>
+                        </li>
+                    </ul>
+                    {% else %}
+                    <ul id="lp" class="button-group rounded">
+                        <li>
+                                <a class="small button round" href="/moderator/login/">Login</a> 
+                        </li>
+                        <li>
+                                <a class="small secondary button round" href="/moderator/signup/">Sign up</a>
+                        </li>
+                    </ul>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </header>
+    
+    <div class="row">
+    <div class="twelve columns">
+
+
     {% if flash.notice %}
         <div class="flash">
             <p>{{ flash.notice }}</p>
         </div>
     {% endif %}
+
     {% if flash.url %}
         <div class="flash">
             <p>{{ flash.url }}</p>
         </div>
     {% endif %}
     {% block content %}{% endblock %}
+        {% block contener %}
+        
+        {% endblock %}
+        <div class="row">
+            <br/>
+        </div>
+        <footer> Made by Lucas Mokrzycki + Piotr Płaneta. (2012)   </footer>
+    </div>
+    </div>
+    </body>
 </body>
 </html>

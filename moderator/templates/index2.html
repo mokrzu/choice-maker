@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="row">
+<div class="twelve columns">
+<h2> Registration page for: {{set.name}}</h2>
+<h3> Moderator: {{set.user.username}} </h3>
+
+<ul>
+	{% for option in set.option_set.all %}
+	<li>
+		{{ option.name }}
+	</li>
+	{% endfor %}
+</ul>
+</div></div>
+{% endblock %}

@@ -16,7 +16,7 @@ def index(request):
         is_logged_in = False
         registrations = {}
 
-    return render_to_response('index.html', {'is_logged_in': is_logged_in, 'registrations' : registrations},
+    return render_to_response('index.html', {'show_login_panel' : True, 'is_logged_in': is_logged_in, 'registrations' : registrations},
         context_instance=RequestContext(request)
     )
 

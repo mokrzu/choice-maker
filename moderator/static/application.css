@@ -7,3 +7,121 @@ body {
 ul.errorlist li {
     color: #b94a48;
 }
+
+@font-face {
+    font-family: chunk;
+    src: url('Chunk.ttf');
+}
+
+h1 {
+	font-family: chunk;
+	color: #E5E5E5;
+	font-size: 70px;
+}
+
+h4 {
+	font-family: chunk;
+	font-size: 26px;
+	color: #3B3B3B;
+}
+
+
+footer {
+	font-family: chunk;
+	text-align: right;
+	padding-right: 35px;
+	font-size: 14px;
+	position: fixed;
+	bottom: 0%;
+	left: 1%;
+	right: 1%;
+	width: 100%;
+	background-color: white;
+}
+
+header {
+	border-bottom: 7px solid #2E2E2E;
+	background-color: black;
+}
+
+body {
+	background-color: #E8E8E8;
+}
+
+section {
+	border-right: 4px solid #424242;
+	padding-right: 30px;
+}
+
+ul {
+	list-style-type: none;
+}
+div.progress.success .meter { 
+	background: #218868;
+	width: 68%;
+}
+
+div.progress { 
+	border: 2px solid #424242;
+	background-color: white; 
+	padding: 3px;
+}
+.pname {
+	float: right;
+}
+
+.pimg {
+	float: top;
+	margin-right: 20px;
+}
+
+.label {
+	top: 5px;
+	font-size: 30px;
+	background-color: #424242;
+}
+
+.photo {
+	top: 15px;
+}
+
+.pro {
+	border: 2px solid #424242;
+}
+
+.comment {
+	background-color: #D1D1D1;
+}
+.button {
+	margin-left: 10px;
+}
+
+#lp{
+	margin-top: 30px;
+}
+
+table {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#login-panel {
+	margin-top: 14px;
+}
+
+#container {
+	margin-top: 15px;
+}
+
+#vote {
+	background-color: #218868;
+}
+
+
+#request {
+	background-color: #53868B;
+}
+
+#signup {
+	float: right;
+}
