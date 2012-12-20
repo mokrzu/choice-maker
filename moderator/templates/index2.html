@@ -4,13 +4,38 @@
 <div class="twelve columns">
 <h2> Registration page for: {{set.name}}</h2>
 <h3> Moderator: {{set.user.username}} </h3>
-
 <ul>
 	{% for option in set.option_set.all %}
 	<li>
-		{{ option.name }}
+		{% if option.choice_set.count < set.limit %}
+			{# <a class="small success button option" data-reveal-id="myModal" id="modalw"> {{ option.name }} </a> #}
+			<a class="small success button option" href="/registration/{{set.id}}/{{option.id}}/register"> {{ option.name }} </a>
+		{% else %}
+			<div class="small alert button option"> {{ option.name }} </div>
+		{% endif %}
 	</li>
 	{% endfor %}
 </ul>
+<a href="/registration/{{set.id}}/edit"> Edit my choice </a>
+
 </div></div>
+ <div id="myModal" class="reveal-modal small">
+    <h3>Contact me: </h3>
+
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+    <!-- Included JS Files (Compressed) -->
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="javascripts/app.js"></script>
+   <script type="text/javascript">
+  $(document).ready(function() {
+    $('#iconForModal').click(function() {
+      $('#myModal').reveal();
+    });
+  });
+  </script>
 {% endblock %}

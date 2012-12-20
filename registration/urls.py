@@ -6,4 +6,6 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     url(r'^(?P<registration_id>\w+)$', 'registration.views.index'),
+    url(r'^(?P<registration_id>\w+)/(?P<option_id>\w+)/register$', 'registration.views.register'),
+    url(r'^(?P<registration_id>\w+)/(?P<option_id>\w+)/save$', 'registration.views.save_choice')
     )

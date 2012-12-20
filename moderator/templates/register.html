@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="row">
+<div class="twelve columns">
+<h2> Registration page for: {{set.name}}</h2>
+<h3> Option: {{option}} </h2>
+<form method="post" action="/registration/{{ set.id }}/{{ option.id }}/save">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Add option">
+</form>
+{% endblock %}

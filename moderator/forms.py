@@ -14,3 +14,8 @@ class OptionSetForm(ModelForm):
     class Meta:
         model = OptionSet
         exclude = ('user',)
+
+class ChoiceForm(ModelForm):
+	class Meta:
+		model = Choice
+		exclude = ('option')

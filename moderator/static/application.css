@@ -14,17 +14,21 @@ ul.errorlist li {
 }
 
 h1 {
-	font-family: chunk;
+	font-family: 'Wendy One', sans-serif;
 	color: #E5E5E5;
 	font-size: 70px;
 }
 
 h4 {
-	font-family: chunk;
+	font-family: 'Wendy One', sans-serif;
 	font-size: 26px;
 	color: #3B3B3B;
 }
 
+h2 {
+	font-family: 'Wendy One', sans-serif;
+	font-weight: 400px;
+}
 
 footer {
 	font-family: chunk;
@@ -41,7 +45,7 @@ footer {
 
 header {
 	border-bottom: 7px solid #2E2E2E;
-	background-color: black;
+	background: url("denim.png");
 }
 
 body {
@@ -92,12 +96,17 @@ div.progress {
 .comment {
 	background-color: #D1D1D1;
 }
+
 .button {
 	margin-left: 10px;
 }
 
 #lp{
 	margin-top: 30px;
+}
+
+.option {
+	margin-top: 10px;
 }
 
 table {
@@ -121,6 +130,8 @@ table {
 #request {
 	background-color: #53868B;
 }
+
+#
 
 #signup {
 	float: right;
